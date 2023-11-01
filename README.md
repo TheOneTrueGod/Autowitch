@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Autowitch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a game where you're trying to cast witchy spells, but you have limited actions with which to do so
 
 ## Available Scripts
 
