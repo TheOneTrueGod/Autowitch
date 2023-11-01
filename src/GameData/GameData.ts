@@ -3,15 +3,15 @@ export type InventoryItem = {
     metadata: {}
 }
 
-enum GardenPlotType {
-    "DIRT" = "dirt",
-    "STONE" = "stone",
+export enum GardenPlotType {
+    "DIRT" = "DIRT",
+    "GRASS" = "GRASS",
 }
 export type GardenPlot = { type: GardenPlotType }
-
+export type Garden = Array<Array<GardenPlot>>
 
 export type GameData = {
-    garden: Array<Array<GardenPlot>>,
+    garden: Garden,
     inventory: Array<InventoryItem | undefined>
 }
 

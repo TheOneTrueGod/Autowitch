@@ -1,7 +1,7 @@
 import React from 'react';
-import { InventoryItem } from "../../GameData/GameData";
-import AllItemDefs from '../../GameData/Items';
-import { TileAssetImage } from './TileAssetImage';
+import { InventoryItem } from "../../../GameData/GameData";
+import AllItemDefs from '../../../GameData/Items';
+import { TileAssetImageComponent } from '../TileAssetImageComponent';
 
 export const InventoryItemComponent: React.FC<{ item?: InventoryItem }> = ({ item }) => {
     const itemDef = item?.itemId !== undefined ? AllItemDefs[item?.itemId] : undefined
@@ -10,6 +10,6 @@ export const InventoryItemComponent: React.FC<{ item?: InventoryItem }> = ({ ite
     }
 
     return (
-        <TileAssetImage tileAssetDef={itemDef.tileAssetDef} />
+        <TileAssetImageComponent tileAssetDef={itemDef.tileAssetDef} />
     );
 };

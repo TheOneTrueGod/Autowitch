@@ -1,8 +1,11 @@
 import React from 'react';
 import { AllTileAssetDefs, AllTileAssetSourcesDefs, TileAssets } from '../../GameData/TileAssets';
 
-export const TileAssetImage: React.FC<{ tileAssetDef: TileAssets }> = ({ tileAssetDef }) => {
+export const TileAssetImageComponent: React.FC<{ tileAssetDef: TileAssets }> = ({ tileAssetDef }) => {
   const tileDef = AllTileAssetDefs[tileAssetDef]
+  if (!tileDef) {
+    throw new Error(`Couldn't find tileDef '${tileAssetDef}'`)
+  }
   const sourceDef = AllTileAssetSourcesDefs[tileDef.tileAssetSource]
   const scale = sourceDef.imageScale
 

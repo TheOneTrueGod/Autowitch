@@ -1,6 +1,6 @@
 import React from 'react';
-import themeConstants from '../../theme/themeConstants';
-import { InventoryItem } from '../../GameData/GameData';
+import themeConstants from '../../../theme/themeConstants';
+import { InventoryItem } from '../../../GameData/GameData';
 import { InventoryItemComponent } from './InventoryItemComponent';
 
 // Define a style object for the inventory and slots
